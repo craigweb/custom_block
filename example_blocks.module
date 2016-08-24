@@ -3,3 +3,18 @@
  * @file
  * Contains example_blocks.module.
  */
+
+/**
+ * Implements hook_theme().
+ */
+function example_blocks_theme() {
+  return array(
+    'intermediate_block' => array(
+      'template' => 'intermediate-block',
+      'variables' => array(
+        'company' => NULL,
+        'address' => NULL,
+      ),
+    ),
+  );
+}
