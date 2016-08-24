@@ -1,0 +1,9 @@
+name: Example Blocks
+description: Examples of blocks created programmatically in Drupal 8.
+package: CTI
+
+type: module
+core: 8.x
+
+dependencies:
+  - block:block
