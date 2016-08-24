@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Contains \Drupal\example_blocks\Plugin\Block\BasicBlock
@@ -8,9 +7,11 @@
 namespace Drupal\example_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+Use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 /**
- * Provides a basic block with a simple text output.
+ * A basic block with a simple text output.
  *
  * @Block(
  *   id = "basic_block",
@@ -24,7 +25,7 @@ class BasicBlock extends BlockBase {
    */
   public function build() {
     return array(
-      '#markup' => $this->t('This is a basic block'),
+      '#markup' => Link::fromTextAndUrl(t('CTI Digital'), Url::fromUri('https://www.ctidigital.com'))->toString(),
     );
   }
 }
